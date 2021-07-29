@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listing Website</title>
+    <style>
+        h2{text-align:center;}
+        /* form{text-align:center;} */
+        form{font-weight:bold;}
+        body{
+            text-align:center;
+            background-image: url('static/pic2.webp');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100% ;
+            margin: 150px;
+        }
+        .leftForm{
+            display:inline-block;
+            font-size: 17.4px;
+            font-weight:bold;
+        }
+        .rightForm{
+            display:inline-block;
+        }
+        form.big .leftForm{
+            line-height: 2.3;
+        }
+        form.big .rightForm{
+            line-height: 2.5;
+        }
+        .big{
+            text-align: center;
+
+        }
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2> Signup Form </h2>
+    
+    <form class="big" method = "POST">
+        <div class="leftForm">
+            Name <br>
+            Password <br>
+            Confirm Password <br>
+            Email <br>
+            CNIC <br>
+            Phone number <br>
+        </div>
+        <div class="rightForm">
+            <input type="text"  placeholder="Enter your name" name='Name'><br>
+            <input type="password" placeholder="Enter your password" name='Password'> <br>
+            <input type="password" placeholder="Confirm password" name='CPassword'> <br>
+            <input type="email" placeholder="Enter your mail" name='Email'> <br>
+            <input type="text" placeholder="Enter your CNIC" name='CNIC'> <br>
+            <input type="text" placeholder="Enter your phone number" name='Phone'> 
+        </div><br>
+        <button type="submit"  value="submit">SUBMIT </button>
+    </form>
+    Already have an account? <a href="Login">Sign In</a>
+</body>
+</html>

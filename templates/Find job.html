@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find job</title>
+    <style>
+        h2{text-align:center;}
+        /* form{text-align:center;} */
+        form{font-weight:bold;}
+        body{
+            text-align:center;
+            background-image: url('static/images.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100% ;
+            margin: 150px;
+        }
+        .leftForm{
+            display:inline-block;
+            font-size: 17.4px;
+            font-weight:bold;
+            text-align: center;
+            padding-right: 100px;
+        }
+        .rightForm{
+            display:inline-block;
+        }
+        form.big .leftForm{
+            line-height: 2.3;
+        }
+        form.big .rightForm{
+            line-height: 2.5;
+        }
+        .big{
+            text-align: center;
+
+        }
+        button{
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2> Resume</h2>
+    <form  class="big">
+        <div class="leftForm">
+            Name <br>
+            Father's name<br>
+            Email <br>
+            CNIC <br>
+            Phone number <br>
+            Education<br>
+            <!-- Marks<br> -->
+            Matric<br>
+            FSC<br>
+            Graduation<br>
+            Qualities<br>
+        </div>
+        <div class="rightForm">
+            <input type="text"  placeholder="Enter your name" name='Name'><br>
+            <input type="text" placeholder="Enter your father name" name='Fathers name'> <br>
+            <input type="email" placeholder="Enter your mail" name='Mail'> <br>
+            <input type="text" placeholder="Enter your CNIC" name='CNIC'> <br>
+            <input type="text" placeholder="Enter your phone number" name='PhoneNumber'> <br>
+            <select name="Education" id="educations">
+                <option value="None">None</option>
+                <option value="Matric">Matric/O Level</option>
+                <option value="Intermediate">Intermediate/A Level</option>
+                <option value="Graduate">Graduate</option>
+                <option value="Masters">Masters</option>
+                <option value="Ph.D">Ph.D</option>
+            </select> <br>
+            <!-- <input type="text" placeholder="education" name='Education'> <br> -->
+            <input type="text" placeholder="Enter matric marks" name='Matric'> <br>
+            <input type="text" placeholder="Enter FSC marks" name='FSC'> <br>
+            <input type="text" placeholder="Enter CGPA" name='Graduation'> <br>
+            <input type="text" placeholder="Enter your qualities" name='Qualities'> <br>
+        </div><br>
+        <button  type="submit"  value="submit">SUBMIT </button>
+    </form>
+</body>
+</html>
