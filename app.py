@@ -12,22 +12,17 @@ def start():
 @app.route('/Login', methods=['GET', 'POST'])
 def Login():
     if 'user' in session:
-        # usr = session['user']
         return redirect(url_for('Home'))
     else:
         if request.method=='POST':
             Email = request.form['Email']
             pswrd = request.form['Password']
             lg_data = pd.read_csv('loginData.csv')
-            print("c2")
             try:
                 if str(lg_data.iloc[lg_data[lg_data['Email']==Email].index.values[0]]['Password']) == pswrd:
-                    print("c3")
                     session['userEmail'] = Email
                     return redirect(url_for('Home'))
                 else:
-                    print(type(lg_data.iloc[lg_data[lg_data['Email']==Email].index.values[0]]['Password']))
-                    print(type(pswrd))
                     return render_template('Login form.html') 
             except:
                 flash("Worng Credenials...", 'error')
@@ -38,7 +33,6 @@ def Login():
 @app.route('/Signup', methods=['GET', 'POST'])
 def signup():
     if request.method=='POST':
-        print("c1")
         Name = request.form['Name']
         mail = request.form['Email']
         pswrd = request.form['Password']
